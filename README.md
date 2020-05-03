@@ -4,14 +4,14 @@ This is an example project to use [monodiff](https://github.com/orangain/monodif
 
 In this example, there are four subprojects:
 
-* [apps/account-service](https://github.com/orangain/monodiff-example-multi-project/tree/master/apps/account-service)
-* [apps/inventory-service](https://github.com/orangain/monodiff-example-multi-project/tree/master/apps/inventory-service)
+* [apps/account-app](https://github.com/orangain/monodiff-example-multi-project/tree/master/apps/account-app)
+* [apps/inventory-app](https://github.com/orangain/monodiff-example-multi-project/tree/master/apps/inventory-app)
 * [libs/greeter](https://github.com/orangain/monodiff-example-multi-project/tree/master/libs/greeter)
 * [libs/profile](https://github.com/orangain/monodiff-example-multi-project/tree/master/libs/profile)
 
 They have the following dependency:
 
-![Both apps/account-service and apps/inventory-service depend on libs/profile and only apps/account-service depends on libs/greeter](https://github.com/orangain/monodiff-example-multi-project/raw/master/docs/deps.svg)
+![Both apps/account-app and apps/inventory-app depend on libs/profile and only apps/account-app depends on libs/greeter](https://github.com/orangain/monodiff-example-multi-project/raw/master/docs/deps.svg)
 
 This dependency is declared in `build.gradle.kts` of each app as following:
 
@@ -27,10 +27,10 @@ Aside from this, [monodiff.json](https://github.com/orangain/monodiff-example-mu
 
 ```json
 {
-  "apps/account-service": {
+  "apps/account-app": {
     "deps": ["build.gradle.kts", "settings.gradle.kts", "libs/greeter", "libs/profile"]
   },
-  "apps/inventory-service": {
+  "apps/inventory-app": {
     "deps": ["build.gradle.kts", "settings.gradle.kts", "libs/profile"]
   }
 }

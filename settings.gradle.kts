@@ -8,7 +8,7 @@
  */
 
 rootProject.name = "monodiff-example-multi-project"
-include("apps:account-service")
-include("apps:inventory-service")
+include("apps:account-app")
+include("apps:inventory-app")
 include("libs:greeter")
 include("libs:profile")

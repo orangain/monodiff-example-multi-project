@@ -1,7 +1,7 @@
 @startuml
 
-rectangle "apps/account-service" as A
-rectangle "apps/inventory-service" as B
+rectangle "apps/account-app" as A
+rectangle "apps/inventory-app" as B
 rectangle "libs/greeter" as C
 rectangle "libs/profile" as D
 
