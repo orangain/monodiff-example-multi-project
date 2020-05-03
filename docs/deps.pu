@@ -3,7 +3,10 @@
 rectangle "apps/account-service" as A
 rectangle "apps/inventory-service" as B
 rectangle "libs/greeter" as C
+rectangle "libs/profile" as D
+
 A --> C
-B --> C
+A --> D
+B --> D
 
 @enduml
