@@ -5,6 +5,6 @@ package greeter
 
 class Greeter {
     fun getGreeting(): String {
-        return "Hello world from Greeter."
+        return "Hello world from Greeter!"
     }
 }
