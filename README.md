@@ -23,7 +23,7 @@ dependencies {
 }
 ```
 
-Aside from this, [monodiff.json](https://github.com/orangain/monodiff-example-multi-project/tree/master/monodiff.json) declares dependency for monodiff. In monodiff.json, only apps are listed. This is because monodiff is used to detect affected roots of dependency.
+Aside from this, [monodiff.json](https://github.com/orangain/monodiff-example-multi-project/tree/master/monodiff.json) declares dependency for monodiff.
 
 ```json
 {
@@ -35,3 +35,9 @@ Aside from this, [monodiff.json](https://github.com/orangain/monodiff-example-mu
   }
 }
 ```
+
+Each key, e.g. `apps/account-app`, represents directory to be rebuilt when its dependencies are changed.
+
+`deps` represents dependencies. Each item is a path to a file or directory. When the file or a file in the directory is changed, a build for the key's directory will be triggered. A path in the `deps` should be relative to the root of Git repository.
+
+In monodiff.json, only apps are listed and libs are not. This is because monodiff is used to detect affected roots of dependency. When an app is built, depending libs will be automatically built thanks to Gradle's dependency management system.
