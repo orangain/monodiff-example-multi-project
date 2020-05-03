@@ -3,13 +3,12 @@
  */
 package greeter
 
-import org.junit.Assert.assertNotNull
 import kotlin.test.Test
-import kotlin.test.assertTrue
+import kotlin.test.assertNotNull
 
 class GreeterTest {
-    @Test fun testSomeLibraryMethod() {
+    @Test fun testGetGreeting() {
         val classUnderTest = Greeter()
-        assertNotNull(classUnderTest.getGreeting(), "getGreeting should return not null")
+        assertNotNull(classUnderTest.getGreeting(), "getGreeting should return non-null value")
     }
 }
