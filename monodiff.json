@@ -1,11 +1,8 @@
 {
   "apps/account-service": {
-    "deps": ["libs/greeter", "build.gradle.kts", "settings.gradle.kts"]
+    "deps": ["build.gradle.kts", "settings.gradle.kts", "libs/greeter", "libs/profile"]
   },
   "apps/inventory-service": {
-    "deps": ["libs/greeter", "build.gradle.kts", "settings.gradle.kts"]
-  },
-  "libs/greeter": {
-    "deps": ["build.gradle.kts", "settings.gradle.kts"]
+    "deps": ["build.gradle.kts", "settings.gradle.kts", "libs/profile"]
   }
 }
