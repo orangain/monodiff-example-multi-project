@@ -10,7 +10,7 @@ class InventoryApp {
     val greeting: String
         get() {
             val profile = Profile().getCurrentProfile()
-            return "Hi, $profile."
+            return "Hello, $profile."
         }
 }
 
