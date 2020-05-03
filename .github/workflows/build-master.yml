@@ -31,3 +31,7 @@ jobs:
 
     - name: Run gradle build only for changed parts
       run: ./gradlew $(cat GRADLE_ARGS.txt)
+
+    - uses: actions/upload-artifact@v2
+      with:
+        path: apps/*/build/libs/*.jar
