@@ -15,6 +15,8 @@ They have the following dependency:
 
 ![Both apps/account-app and apps/inventory-app depend on libs/profile and only apps/account-app depends on libs/greeter](https://github.com/orangain/monodiff-example-multi-project/raw/master/docs/deps.svg)
 
+By using monodiff, only changed apps can be built as follows:
+
 * When the `apps/inventory-app` is [changed](https://github.com/orangain/monodiff-example-multi-project/pull/1), only the `apps/inventory-app` will be built.
   ![CI result](https://github.com/orangain/monodiff-example-multi-project/raw/master/docs/screenshot1.png)
 * When the `libs/greeter` is [changed](https://github.com/orangain/monodiff-example-multi-project/pull/2), only the `apps/account-app` will be built.
@@ -25,7 +27,7 @@ They have the following dependency:
 
 ## Details
 
-This dependency is declared in `build.gradle.kts` of each app as following:
+This dependency is declared in `build.gradle.kts` of each app.
 
 ```kts
 dependencies {
