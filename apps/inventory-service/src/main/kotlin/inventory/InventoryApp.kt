@@ -3,15 +3,17 @@
  */
 package inventory
 
-import greeter.Greeter
+import profile.Profile
 
 class InventoryApp {
+
     val greeting: String
         get() {
-            return "Hello world."
+            val profile = Profile().getCurrentProfile()
+            return "Hi, $profile."
         }
 }
 
 fun main(args: Array<String>) {
-    println("inventory-service: ${Greeter().getGreeting()}")
+    println("[inventory-service] ${InventoryApp().greeting}")
 }

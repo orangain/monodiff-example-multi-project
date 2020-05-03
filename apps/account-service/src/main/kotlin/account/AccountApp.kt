@@ -4,14 +4,16 @@
 package account
 
 import greeter.Greeter
+import profile.Profile
 
 class AccountApp {
     val greeting: String
         get() {
-            return "Hello world."
+            val profile = Profile().getCurrentProfile()
+            return "Hi, $profile. ${Greeter().getGreeting()}"
         }
 }
 
 fun main(args: Array<String>) {
-    println("account-service: ${Greeter().getGreeting()}")
+    println("[account-service]: ${AccountApp().greeting}")
 }
