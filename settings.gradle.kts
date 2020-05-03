@@ -11,3 +11,4 @@ rootProject.name = "monodiff-example-multi-project"
 include("apps:account-service")
 include("apps:inventory-service")
 include("libs:greeter")
+include("libs:profile")
