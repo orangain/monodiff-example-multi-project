@@ -15,5 +15,5 @@ class InventoryApp {
 }
 
 fun main(args: Array<String>) {
-    println("[inventory-service] ${InventoryApp().greeting}")
+    println("[inventory-app] ${InventoryApp().greeting}")
 }

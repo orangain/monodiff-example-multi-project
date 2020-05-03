@@ -10,6 +10,9 @@ plugins {
 
     // Apply the application plugin to add support for building a CLI application.
     application
+
+    // Create shadow jar
+    id("com.github.johnrengelman.shadow") version "4.0.4"
 }
 
 repositories {
@@ -37,5 +40,12 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClassName = "account.AppKt"
+    mainClassName = "account.AccountAppKt"
 }
+
+tasks {
+    build {
+        dependsOn(shadowJar)
+    }
+}
+
