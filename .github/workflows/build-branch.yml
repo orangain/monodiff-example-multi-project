@@ -28,7 +28,9 @@ jobs:
       run: git fetch origin master
 
     - name: Detect changed parts
-      run: git diff --name-only origin/master | ./monodiff --prefix ":" --separator ":" --suffix :build > GRADLE_ARGS.txt && cat GRADLE_ARGS.txt
+      run: |
+        set -eo pipefail
+        git diff --name-only origin/master | ./monodiff --prefix ":" --separator ":" --suffix :build > GRADLE_ARGS.txt && cat GRADLE_ARGS.txt
 
     - name: Run gradle build only for changed parts
       run: ./gradlew $(cat GRADLE_ARGS.txt)

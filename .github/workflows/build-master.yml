@@ -25,7 +25,9 @@ jobs:
       run: curl -L https://github.com/orangain/monodiff/releases/download/v0.0.1/monodiff_linux_x86_64.tar.gz | tar zx -C ./ monodiff  # Extract `monodiff` command from tar archive and put it into current directory
 
     - name: Detect changed parts
-      run: git diff --name-only HEAD^ | ./monodiff --prefix ":" --separator ":" --suffix :build > GRADLE_ARGS.txt && cat GRADLE_ARGS.txt
+      run: |
+        set -eo pipefail
+        git diff --name-only HEAD^ | ./monodiff --prefix ":" --separator ":" --suffix :build > GRADLE_ARGS.txt && cat GRADLE_ARGS.txt
 
     - name: Run gradle build only for changed parts
       run: ./gradlew $(cat GRADLE_ARGS.txt)
