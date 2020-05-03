@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="151px" preserveAspectRatio="none" style="width:403px;height:151px;" version="1.1" viewBox="0 0 403 151" width="403px" zoomAndPan="magnify"><defs><filter height="300%" id="fkseocau971dx" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[770389ab9df153645bc6ef28055eb2b5]
+entity A--><rect fill="#FEFECE" filter="url(#fkseocau971dx)" height="36.2969" style="stroke: #000000; stroke-width: 1.5;" width="171" x="6" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="151" x="16" y="30.9951">apps/account-service</text><!--MD5=[b2d39259b6aeabc16b394deeb0238426]
+entity B--><rect fill="#FEFECE" filter="url(#fkseocau971dx)" height="36.2969" style="stroke: #000000; stroke-width: 1.5;" width="180" x="212.5" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="160" x="222.5" y="30.9951">apps/inventory-service</text><!--MD5=[16fab723be418f7eaf2ea4bd895a8e51]
+entity C--><rect fill="#FEFECE" filter="url(#fkseocau971dx)" height="36.2969" style="stroke: #000000; stroke-width: 1.5;" width="101" x="146" y="104"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="81" x="156" y="126.9951">libs/greeter</text><!--MD5=[e1650921a81fac0037ec207a42ac4e7e]
+link A to C--><path d="M110.759,44.241 C128.372,60.0091 154.465,83.3687 173.237,100.1739 " fill="none" id="A-&gt;C" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="177.363,103.8683,173.3245,94.8855,173.6374,100.5337,167.9892,100.8465,177.363,103.8683" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[cd25d8247324207f828a4db9f58ed69d]
+link B to C--><path d="M283.058,44.241 C265.277,60.0091 238.935,83.3687 219.985,100.1739 " fill="none" id="B-&gt;C" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="215.819,103.8683,225.2067,100.89,219.56,100.551,219.899,94.9043,215.819,103.8683" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[8641322d0d75114d19d0c28834537bb3]
+@startuml
+rectangle " apps/account-service " as A
+rectangle " apps/inventory-service " as B
+rectangle "libs/greeter" as C
+A - -> C
+B - -> C
+@enduml
+
+PlantUML version 1.2020.09beta15(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 14.0.1+7
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
