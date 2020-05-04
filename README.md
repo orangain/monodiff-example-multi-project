@@ -50,8 +50,22 @@ Aside from this, [monodiff.json](https://github.com/orangain/monodiff-example-mu
 }
 ```
 
-Each key, e.g. `apps/account-app`, represents directory to be rebuilt when its dependencies are changed.
+Each key, e.g. `apps/account-app`, represents a directory to be rebuilt when its dependencies are changed. For example, `apps/account-app` will be rebuilt when `build.gradle.kts`, `settings.gradle.kts` or files under `apps/account-app`, `libs/greeter` or `libs/profile` are changed.
 
-`deps` represents dependencies. Each item is a path to a file or directory. When the file or a file in the directory is changed, a build for the key's directory will be triggered. A path in the `deps` should be relative to the root of Git repository.
+In this `monodiff.json`, only apps are listed and libs are not listed. This is because what we want to detect here is affected roots of dependency. When the affected app is built, depending libs will be automatically built by the Gradle's dependency management system.
 
-In monodiff.json, only apps are listed and libs are not. This is because monodiff is used to detect affected roots of dependency. When an app is built, depending libs will be automatically built thanks to Gradle's dependency management system.
+By default, `monodiff` command outputs affected sub-projects as follows:
+
+```
+$ git diff --name-only origin/master | monodiff
+apps/account-app
+apps/inventory-app
+```
+
+When you use Gradle multi-project build, there are some useful options. The output of the following command can be used as an argument of `gradle` command to build only affected sub-projects.
+
+```
+$ git diff --name-only origin/master | monodiff --prefix ":" --separator ":" --suffix :build
+:apps:account-app:build
+:apps:inventory-app:build
+```
