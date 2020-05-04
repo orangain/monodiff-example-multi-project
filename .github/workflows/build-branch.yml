@@ -2,7 +2,7 @@ name: build branch
 
 on:
   push:
-    branches-ignore: [ master ]
+    branches-ignore: [ master ] # Branches except for master
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,6 +23,7 @@ jobs:
     - name: Fetch git master
       run: git fetch origin master
 
+    # It is advisable to use `set -eo pipefail` and to write results into files to make the job failed on error.
     - name: Detect changed parts
       run: |
         set -eo pipefail

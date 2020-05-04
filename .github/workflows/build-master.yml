@@ -22,6 +22,7 @@ jobs:
         java-version: '11' # The JDK version to make available on the path.
     - uses: orangain/setup-monodiff-action@v1
 
+    # It is advisable to use `set -eo pipefail` and to write results into files to make the job failed on error.
     - name: Detect changed parts
       run: |
         set -eo pipefail
